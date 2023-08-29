@@ -1,4 +1,4 @@
-import get, gen
+import get, gen, copy
 
 if __name__ == '__main__':
     url = get.get_latest()
@@ -15,4 +15,5 @@ if __name__ == '__main__':
     print('Bold generated')
     gen.gen_light()
     print('Light generated')
-    print('Finished')
+    copy.copy_result()
+    print('Copy Finished')
