@@ -63,7 +63,7 @@ def set_bold_names(font):
         ('English (US)', 'SubFamily', 'Bold'),
         ('English (US)', 'Version', get_version(font)),
         ('English (US)', 'Copyright', COPYRIGHT),
-        ('Chinese (PRC)', 'Family', '微软雅黑 Bold'),
+        ('Chinese (PRC)', 'Family', '微软雅黑'),
         ('Chinese (PRC)', 'Fullname', '微软雅黑 Bold')
     )
 
@@ -80,7 +80,7 @@ def set_bold_ui_names(font):
         ('English (US)', 'SubFamily', 'Bold'),
         ('English (US)', 'Version', get_version(font)),
         ('English (US)', 'Copyright', COPYRIGHT),
-        ('Chinese (PRC)', 'Family', '微软雅黑 UI Bold'),
+        ('Chinese (PRC)', 'Family', '微软雅黑 UI'),
         ('Chinese (PRC)', 'Fullname', '微软雅黑 UI Bold')
     )
 
@@ -97,7 +97,7 @@ def set_light_names(font):
         ('English (US)', 'SubFamily', 'Light'),
         ('English (US)', 'Version', get_version(font)),
         ('English (US)', 'Copyright', COPYRIGHT),
-        ('Chinese (PRC)', 'Family', '微软雅黑 Light'),
+        ('Chinese (PRC)', 'Family', '微软雅黑'),
         ('Chinese (PRC)', 'Fullname', '微软雅黑 Light')
     )
 
@@ -114,7 +114,7 @@ def set_light_ui_names(font):
         ('English (US)', 'SubFamily', 'Light'),
         ('English (US)', 'Version', get_version(font)),
         ('English (US)', 'Copyright', COPYRIGHT),
-        ('Chinese (PRC)', 'Family', '微软雅黑 UI Light'),
+        ('Chinese (PRC)', 'Family', '微软雅黑 UI'),
         ('Chinese (PRC)', 'Fullname', '微软雅黑 UI Light')
     )
 
