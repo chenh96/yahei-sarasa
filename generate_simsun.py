@@ -1,9 +1,6 @@
 import fontforge as ff
 import shutil as fs
-
-FONT_DIR = '/home/chenh/font'
-OUT_DIR = '/home/chenh/font/result'
-COPYRIGHT = 'Made from sarasa by chenh'
+import auto_configs as conf
 
 def open_font(path):
     return ff.open(path)
@@ -22,9 +19,9 @@ def set_simsun_names(font):
     font.familyname = 'SimSun'
     font.fullname = 'SimSun'
     font.version = get_version(font)
-    font.copyright = COPYRIGHT
+    font.copyright = conf.COPYRIGHT
     font.sfnt_names = (
-        ('English (US)', 'Copyright', COPYRIGHT), 
+        ('English (US)', 'Copyright', conf.COPYRIGHT), 
         ('English (US)', 'Family', 'SimSun'), 
         ('English (US)', 'SubFamily', 'Regular'), 
         ('English (US)', 'UniqueID', 'SimSun'), 
@@ -40,9 +37,9 @@ def set_new_simsun_names(font):
     font.familyname = 'NSimSun'
     font.fullname = 'NSimSun'
     font.version = get_version(font)
-    font.copyright = COPYRIGHT
+    font.copyright = conf.COPYRIGHT
     font.sfnt_names = (
-        ('English (US)', 'Copyright', COPYRIGHT), 
+        ('English (US)', 'Copyright', conf.COPYRIGHT), 
         ('English (US)', 'Family', 'NSimSun'), 
         ('English (US)', 'SubFamily', 'Regular'), 
         ('English (US)', 'UniqueID', 'NSimSun'), 
@@ -58,9 +55,9 @@ def set_simsun_ext_names(font):
     font.familyname = 'SimSun-ExtB'
     font.fullname = 'SimSun-ExtB'
     font.version = get_version(font)
-    font.copyright = COPYRIGHT
+    font.copyright = conf.COPYRIGHT
     font.sfnt_names = (
-        ('English (US)', 'Copyright', COPYRIGHT), 
+        ('English (US)', 'Copyright', conf.COPYRIGHT), 
         ('English (US)', 'Family', 'SimSun-ExtB'), 
         ('English (US)', 'SubFamily', 'Regular'), 
         ('English (US)', 'UniqueID', 'SimSun-ExtB'), 
@@ -70,28 +67,23 @@ def set_simsun_ext_names(font):
     )
 
 def gen_simsun_ttc():
-    fs.copy(FONT_DIR + '/sarasa-ui-sc-regular.ttf', FONT_DIR + '/sarasa-ui-sc-regular-new.ttf')
+    fs.copy(conf.DOWNLOAD_DIR + '/SarasaUiSC-Regular.ttf', conf.DOWNLOAD_DIR + '/SarasaUiSC-Regular-New.ttf')
 
-    font = open_font(FONT_DIR + '/sarasa-ui-sc-regular.ttf')
+    font = open_font(conf.DOWNLOAD_DIR + '/SarasaUiSC-Regular.ttf')
     remove_gasp(font)
     set_cleartype(font)
     set_simsun_names(font)
 
-    font_ui = open_font(FONT_DIR + '/sarasa-ui-sc-regular-new.ttf')
+    font_ui = open_font(conf.DOWNLOAD_DIR + '/SarasaUiSC-Regular-New.ttf')
     remove_gasp(font_ui)
     set_cleartype(font_ui)
     set_new_simsun_names(font_ui)
 
-    font.generateTtc(OUT_DIR + '/simsun.ttc', font_ui, ttcflags = ('merge'), layer = 1)
+    font.generateTtc(conf.DOWNLOAD_DIR + '/simsun.ttc', font_ui, ttcflags = ('merge'), layer = 1)
 
 def gen_simsun_ext():
-    font = open_font(FONT_DIR + '/sarasa-ui-sc-regular.ttf')
+    font = open_font(conf.DOWNLOAD_DIR + '/SarasaUiSC-Regular.ttf')
     remove_gasp(font)
     set_cleartype(font)
     set_simsun_ext_names(font)
-    font.generate(OUT_DIR + '/simsunb.ttf')
-
-if __name__ == '__main__':
-    gen_simsun_ttc()
-    gen_simsun_ext()
-    
+    font.generate(conf.DOWNLOAD_DIR + '/simsunb.ttf')
