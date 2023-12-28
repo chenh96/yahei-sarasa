@@ -11,6 +11,6 @@ apt install python3-fontforge
 python3 auto_all.py
 ```
 
-# 4. Get Result
+# 3. Get Result
 
 Check result fonts in `./result`
