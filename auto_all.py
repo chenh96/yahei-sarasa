@@ -4,8 +4,9 @@ import generate_fonts as gen
 import generate_simsun as simsun
 import copy_result as copy
 
+
 if __name__ == '__main__':
-    fetch.clear_dir(conf.DOWNLOAD_DIR)
+    fetch.clear_dir(conf.TEMP_DIR)
     fetch.clear_dir(conf.RESULT_DIR)
 
     url = fetch.get_latest()
