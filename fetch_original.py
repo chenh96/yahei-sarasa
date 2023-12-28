@@ -15,8 +15,9 @@ def get_latest():
     details = json.loads(response.content)
 
     version = details['tag_name'][1:]
-    name = 'Sarasa-TTF-' + version + \
-        '.7z' if conf.HINTED else 'Sarasa-TTF-Unhinted-' + version + '.7z'
+    name = (conf.HINTED
+            and 'Sarasa-TTF-' + version + '.7z'
+            or 'Sarasa-TTF-Unhinted-' + version + '.7z')
 
     assets = details['assets']
     for asset in assets:
