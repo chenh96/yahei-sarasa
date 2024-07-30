@@ -5,6 +5,9 @@
 - 合并篡改后的文件，把它放到指定目录
 
 # 关于代码的运行
+
+> 建议使用 ubuntu，其他操作系统可能会缺少相关依赖
+
 1. 在 ubuntu 中安装以下依赖
 ```bash
 apt install fontforge
