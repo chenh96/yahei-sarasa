@@ -40,7 +40,3 @@ TEMP_DIR  # 临时目录
 RESULT_DIR  # 结果目录
 OTHER_COPY  # 你想复制的其他文件到结果目录
 ```
-
-# 或许是更好的选择
-
-最近发现的远景大佬修复版 Noble Scarlet，链接：[PCbeta](https://bbs.pcbeta.com/viewthread-1960120-1-1.html)
