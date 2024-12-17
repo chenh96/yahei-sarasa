@@ -1,42 +1,25 @@
 # 介绍
 
-本项目主要用于自动将更纱黑体转换为微软雅黑和宋体，它包含以下功能：
-- 自动下载并解压最新的更纱黑体发行版
-- 使用 fontforge 篡改更纱黑体中的字体信息
-- 合并篡改后的文件，把它放到指定目录
+本项目代码原用于，将更纱黑体的信息改为微软雅黑和宋体的，来替换 Windows 系统的默认字体。
 
-# 关于代码的运行
+现在改为，通过更纱黑体的源码，将思源黑体和 Segoe UI 结合为微软雅黑和宋体。
 
-> 建议使用 ubuntu，其他操作系统可能会缺少相关依赖
+该字体主要是使用了更纱黑体的 Hint 机制，能够提供更锐利的显示效果。
 
-1. 在 ubuntu 中安装以下依赖
-```bash
-apt install fontforge
-apt install python3-fontforge
-```
+# 构建流程
 
-2. 在 pip 中安装以下依赖
-```bash
-pip3 install wget
-pip3 install py7zr
-```
+1. 参考原版微软雅黑，移除 Segoe UI 中大多数 OpenType 特性；
 
-3. 运行入口文件
-```bash
-python3 auto_all.py
-```
+2. 将 Segoe UI 伪装成 Inter 字体，替换更纱黑体项目的源字体；
 
-# 关于配置
+3. 修改更纱黑体源码，保留 Segoe UI 中的 Hinting；
 
-在 `auto_configs.py` 文件中修改生成配置：
-```python
-HINTED  # 是否下载 Hinted 版本
-REGULAR_SOURCE  # 标准字体来源的文件名
-BOLD_SOURCE  # 粗体来源的文件名
-LIGHT_SOURCE  # 细体来源的文件名
-SIMSUN_SOURCE  # 宋体来源的文件名
-COPYRIGHT  # 字体的 Copyright
-TEMP_DIR  # 临时目录
-RESULT_DIR  # 结果目录
-OTHER_COPY  # 你想复制的其他文件到结果目录
-```
+4. 执行更纱黑体的构建流程，得到构建出的更纱黑体；
+
+5. 修改更纱黑体字体信息，伪装成微软雅黑和宋体。
+
+# 接下来
+
+1. 编写更加自动化的代码，而不是靠手搓；
+
+2. 能够实现输入任意中文字体和拉丁字体，构建出包含 Hinting 的合成字体。
