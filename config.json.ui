@@ -1,0 +1,66 @@
+{
+	"buildOptions": {},
+	"familyOrder": ["Ui"],
+	"families": {
+		"Ui": {
+			"isPWID": true,
+			"isTNUM": true,
+			"latinGroup": "Inter",
+			"naming": {
+				"en_US": "Sarasa UI",
+				"zh_CN": "更纱黑体 UI"
+			}
+		}
+	},
+	"styleOrder": ["Light", "Regular", "Bold"],
+	"latinGroups": {
+		"Inter": {
+			"isCff": false,
+			"bakeFeatures": [],
+			"dropFeatures": []
+		}
+	},
+	"styles": {
+		"Light": {
+			"name": "Light"
+		},
+		"Regular": {
+			"name": "Regular"
+		},
+		"Bold": {
+			"name": "Bold"
+		}
+	},
+	"subfamilyOrder": ["SC"],
+	"os2encodings": {
+		"SC": {
+			"gbk": true,
+			"big5": false,
+			"jis": false,
+			"korean": false
+		}
+	},
+	"nameTupleSelector": {
+		"SC": ["en_US", "zh_CN"]
+	},
+	"copyright": "Copyright (c) 2015-2025, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Portions Copyright (c) 2016 The Inter Project Authors. Portions Copyright (c) 2014-2021 Adobe Systems Incorporated (http://www.adobe.com/). Portions Copyright (c) 2012 Google Inc.",
+	"shsSourceMap": {
+		"defaultRegion": "SourceHanSans",
+		"region": {
+			"CL": "SourceHanSansK",
+			"SC": "SourceHanSansSC"
+		},
+		"styleMap": {
+			"SemiBold": "Medium"
+		},
+		"classicalRegion": "CL",
+		"classicalOverridePrefix": "ShangguSansTC",
+		"classicalOverrideSuffixMap": {
+			"ExtraLight": "ExtraLight-subset",
+			"Light": "Light-subset",
+			"Regular": "Regular-subset",
+			"SemiBold": "Medium-subset",
+			"Bold": "Bold-subset"
+		}
+	}
+}
