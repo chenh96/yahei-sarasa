@@ -4,8 +4,8 @@ import shutil
 
 TMP_DIR = './temp'
 DST_DIR = './result'
-VERSION = '2501'
-COPYRIGHT = 'Builder: chenh; Date: 2025-02-02; Sources: Source Han Sans 2.004 & Segoe UI 5.67'
+VERSION = '2502'
+COPYRIGHT = 'Builder: chenh; Date: 2026-01-25'
 
 FEATURE_FONTS = [
     ('SarasaUiSC-Regular.ttf', 'SarasaUiSC-Regular-NoFeat.ttf'),
@@ -68,7 +68,7 @@ def remove_features(src, dst):
         if not records:
             del font[table]
 
-    font.save(dst)
+    font.save(f'{TMP_DIR}/{dst}')
 
 
 def set_names(src, weight, ui):

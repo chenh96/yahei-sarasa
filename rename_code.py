@@ -3,8 +3,8 @@ from fontTools.ttLib import TTFont
 
 TMP_DIR = './temp'
 DST_DIR = './result'
-VERSION = '2503'
-COPYRIGHT = 'Builder: chenh; Date: 2025-03-11; Sources: Source Han Sans & Iosevka'
+VERSION = '2504'
+COPYRIGHT = 'Builder: chenh; Date: 2026-01-25'
 
 
 RENAME_FONTS = [
